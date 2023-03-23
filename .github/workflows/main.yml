@@ -94,6 +94,17 @@ jobs:
                                                                                   # if both JUnit & TestNG tests, use target/surefire-reports/testng-junit-results/testng-results.xml
                   # GitHub Custom Action
                   test-type: # optional, default is JUnit
+            - name: ServiceNow DevOps Sonar Scan Results
+              uses: ServiceNow/servicenow-devops-sonar@v1.34.2
+              with:
+                devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
+                devops-integration-user-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+                instance-url: ${{ secrets.SN_INSTANCE_URL }}
+                tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+                context-github: ${{ toJSON(github) }}
+                job-name: 'Build'
+                sonar-host-url: ${{ secrets.SONAR_URL }}
+                sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}       
     integrationTest:
         #if: github.event.pull_request.merged == true
         name: Integration Tests
