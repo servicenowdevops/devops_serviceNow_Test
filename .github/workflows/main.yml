@@ -61,7 +61,8 @@ jobs:
             #  run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devops-test-repo
             - name: Sonar Cloud Analysis
               if: success() # always() failure() success()
-              run: >                  mvn -B verify -DskipTests sonar:sonar
+              run: >                  
+                mvn -B verify -DskipTests sonar:sonar
                   -Dsonar.projectKey=$SONAR_PROJECT_KEY
                   -Dsonar.organization=$SONAR_ORG_KEY
                   -Dsonar.host.url=$SONAR_URL
@@ -122,25 +123,25 @@ jobs:
                   context-github: ${{ toJSON(github) }}
                   # List of Artifacts to be registered
                   artifacts: '[
-                      {
+                       {
                           "name": "app-devops.jar",
                           "version": "1.${{ github.run_number }}",
                           "semanticVersion": "1.${{ github.run_number }}.0",
                           "repositoryName": "${{ github.repository }}"
-                      },
-                      {
+                       },
+                       {
                           "name": "app-devops-integrations.jar",
                           "version": "1.${{ github.run_number }}",
                           "semanticVersion": "1.${{ github.run_number }}.0",
                           "repositoryName": "${{ github.repository }}"
-                      },
-                      {
+                       },
+                       {
                           "name": "app-devops-workspace.jar",
                           "version": "1.${{ github.run_number }}",
                           "semanticVersion": "1.${{ github.run_number }}.0",
                           "repositoryName": "${{ github.repository }}"
-                      }
-                  ]'
+                       }
+               ]'
             - name: ServiceNow DevOps Register Package
             # You may pin to the exact commit or the version.
             # uses: ServiceNow/servicenow-devops-register-package@96a351e6f06e592011b9bdd7da5b2af26506d86b
