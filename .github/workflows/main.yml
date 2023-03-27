@@ -104,11 +104,19 @@ jobs:
                 context-github: ${{ toJSON(github) }}
                 job-name: 'Build'
                 sonar-host-url: ${{ secrets.SONAR_URL }}
-                sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}       
+                sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}   
+    SonarTest:
+       - name: Post Deploy
+         needs: test 
+         runs-on: ubuntu-latest
+         steps:
+            - name: Run deployment scripts
+              run: echo Completed Deployment
+              
     integrationTest:
         #if: github.event.pull_request.merged == true
         name: Integration Tests
-        needs: test
+        needs: SonarTest
         runs-on: ubuntu-latest
         steps:
             - name: ServiceNow DevOps Register Artifact
