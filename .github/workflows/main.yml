@@ -106,7 +106,7 @@ jobs:
                 sonar-host-url: ${{ secrets.SONAR_URL }}
                 sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}   
     SonarTest:
-       - name: Post Deploy
+         name: Sonar stage
          needs: test 
          runs-on: ubuntu-latest
          steps:
