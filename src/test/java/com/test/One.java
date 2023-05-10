@@ -1,5 +1,5 @@
 package com.test;
-//import
+//import test
 import java.util.ArrayList;
 public class One {
   String message = "foo";
