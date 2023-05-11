@@ -2,7 +2,7 @@ package com.test;
 //import test123
 import java.util.ArrayList;
 public class One {
-  String message = "foo";
+  String message = "fooggjdjdjj";
   private static final String BCFKS_WRONG_PASSWORD_ERROR = "MAC calculation failed";
 private ArrayList<String> fValidateOrderedList;
   public String foo() {
