@@ -11,7 +11,7 @@ import com.lib.Library;
 
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
-        //comment
+        //commentnew
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
