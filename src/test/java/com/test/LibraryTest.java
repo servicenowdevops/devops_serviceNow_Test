@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import com.lib.Library;
-
+//test
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
         //commentnew
