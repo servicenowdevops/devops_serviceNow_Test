@@ -7,7 +7,6 @@ pipeline {
    stages {
        stage("Build") {
                 steps {
-                    snDevOpsStep ()
                     echo "Building" 
                     sh 'mvn -X clean install -DskipTests'
                     sleep 5
@@ -15,7 +14,6 @@ pipeline {
        }
         stage("Test") {
            steps {
-               snDevOpsStep ()
                echo "Testing"
                sh 'mvn test'
                sleep 15
@@ -29,7 +27,6 @@ pipeline {
       
       stage("Create Artifact for prod") {
            steps {
-              snDevOpsStep ()
               echo "Creating artifact"
               sh 'mvn package'
               sleep 3
@@ -57,14 +54,16 @@ pipeline {
                    }
                  ]
                 }""")
+                
+                sleep 3
+                
+                snDevOpsChange()
            }
         }
   
       stage("Deploy") {
              steps{
-                  snDevOpsStep ()
                   echo ">> Deploy in prod"
-                  snDevOpsChange()
               }
       }      
       
