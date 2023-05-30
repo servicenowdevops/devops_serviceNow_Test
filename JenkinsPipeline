@@ -27,20 +27,10 @@ pipeline {
       
       stage("Create Artifact for prod") {
            steps {
-              echo "Creating artifact"
+              echo "Creating package"
               sh 'mvn package'
               sleep 3
-              snDevOpsArtifact(artifactsPayload:"""
-               {"artifacts": 
-                  [
-                     {
-                        "name": "avgbrewingapp-mvp.jar",
-                        "version":"0.${env.BUILD_NUMBER}.0",
-                        "semanticVersion": "0.${env.BUILD_NUMBER}.0",
-                        "repositoryName": "bm-artifacts-repo"
-                       }
-                    ]
-                 }""")
+             
               snDevOpsPackage(name: "avgbrewingapp", artifactsPayload: """
               {"artifacts": 
                [
