@@ -75,7 +75,7 @@ jobs:
             - name: ServiceNow DevOps Unit Test Results
             # You may pin to the exact commit or the version.
             # uses: ServiceNow/servicenow-devops-test-report@6c7ef85f6aedfb7ab17e4d17c52c14c5f2f455fd
-              uses: ServiceNow/servicenow-devops-test-report@main
+              uses: ServiceNow/servicenow-devops-test-report@dev
               with:
                   # Devops Integration User Name
                   devops-integration-user-name: ${{ secrets.SN_DEVOPS_USER }}
