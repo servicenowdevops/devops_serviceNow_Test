@@ -221,7 +221,7 @@ jobs:
                   # Github Context
                   context-github: ${{ toJSON(github) }}
                   # The max. time in seconds to wait until the action should fail.
-                  timeout: 3600 # optional, default is 3600
+                  timeout: 240 # optional, default is 3600
                   # The time in seconds to wait between trying the API.
                   interval: 100 # optional, default is 100
                   # The customized inputs to create change with the requested details.
