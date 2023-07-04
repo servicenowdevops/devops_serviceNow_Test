@@ -229,6 +229,7 @@ jobs:
                       "setCloseCode": "true",
                       "attributes": {
                           "short_description": "Automated Software Deployment",
+                          "chg_model":"adffaa9e4370211072b7f6be5bb8f2ed",
                           "description": "Automated Software Deployment.",
                           "assignment_group": "a715cd759f2002002920bde8132e7018",
                           "implementation_plan": "Software update is tested and results can be found in Test Summaries Tab.",
