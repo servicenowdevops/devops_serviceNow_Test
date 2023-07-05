@@ -19,7 +19,7 @@ jobs:
                   # Orchestration Tool Id
                 tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
                   # Display Name of the Job
-                job-name: 'Deploy'
+                job-name: 'Change Request'
                   # Github Context
                 context-github: ${{ toJSON(github) }}
                   # The max. time in seconds to wait until the action should fail.
