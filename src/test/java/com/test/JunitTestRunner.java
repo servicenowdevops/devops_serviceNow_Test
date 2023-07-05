@@ -11,7 +11,7 @@ public class JunitTestRunner {
 	      for (Failure failure : result.getFailures()) {
 	         System.out.println(failure.toString());
 	      }
-		//Comment		
+		//xyz		
 	      System.out.println(result.wasSuccessful());
 	   }
 }
