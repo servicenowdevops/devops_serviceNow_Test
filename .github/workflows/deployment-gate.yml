@@ -40,7 +40,7 @@ jobs:
                           "test_plan": "Testing if the software was successfully deployed"
                       }
                   }'
-         deployment-gate: '{"environment":"prod","jobId":"deploy","jobName":"Deploy"}'
+                deployment-gate: '{"environment":"prod","jobId":"deploy","jobName":"Deploy"}'
         
   deploy:
     name: Deploy
