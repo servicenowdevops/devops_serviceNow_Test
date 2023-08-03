@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:     
       - name: ServiceNow DevOps Change Attributes
-        uses: ServiceNow/servicenow-devops-change@dev2
+        uses: ServiceNow/servicenow-devops-change@main
         with:
                # ServiceNow Instance URL
                 instance-url: ${{ secrets.SN_INSTANCE_URL }}
