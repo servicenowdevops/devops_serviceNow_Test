@@ -95,7 +95,7 @@ jobs:
                                                                                   # if both JUnit & TestNG tests, use target/surefire-reports/testng-junit-results/testng-results.xml
                   # GitHub Custom Action
                   test-type: # optional, default is JUnit
-            - #name: ServiceNow DevOps Sonar Scan Results
+           # - #name: ServiceNow DevOps Sonar Scan Results
               #uses: ServiceNow/servicenow-devops-sonar@main
               #with:
                 #devops-integration-token: ${{ secrets.SN_INSTANCE_TOKEN }}
