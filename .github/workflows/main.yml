@@ -4,7 +4,7 @@ name: GitHub Actions Workflow with SNOW custom tasks
 on: workflow_dispatch
 #  pull_request_target:
 #    types:
-#      - closed the repo
+#      - closed the repo, new committ
 jobs:
     build:
         # Running your workflow when a pull request merges
